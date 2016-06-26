@@ -1,6 +1,6 @@
 {
     "operations": {
-        "getCustomers": {
+        "getPurchaseOrders": {
             "httpMethod": "GET",
             "uri": "/purchase_orders",
             "description": "Lists and returns purchase order information.",
