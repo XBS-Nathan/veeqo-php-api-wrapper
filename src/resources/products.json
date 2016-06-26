@@ -1,0 +1,42 @@
+{
+    "operations": {
+        "getProducts": {
+            "httpMethod": "GET",
+            "uri": "/products",
+            "description": "Lists and returns product information.",
+            "responseModel": "defaultJsonResponse",
+            "parameters": {
+                "since_id": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "created_at_min": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "updated_at_min": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "page_size": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "page": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "query": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                }
+            }
+        }
+    }
+}
