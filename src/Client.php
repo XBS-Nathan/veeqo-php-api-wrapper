@@ -42,6 +42,8 @@ class Client
      */
     private $settings = [];
 
+    private $apiKey;
+
 
     public function __construct(array $settings = array())
     {
@@ -49,9 +51,11 @@ class Client
         $this->locator = new FileLocator($configDirectory);
         $this->jsonLoader = new JsonLoader($this->locator);
 
-        $this->settings = array_merge($settings, [
+        $this->settings = [
             'baseUrl' => self::VEEQO_API_URL
-        ]);
+        ];
+
+        $this->apiKey = $settings['X-Api-Key'];
 
         $this->buildClient();
     }
@@ -68,7 +72,7 @@ class Client
 
         $client = $this->getBaseClient();
 
-        $client->setDefaultOption('headers/X-Api-Key', $this->settings['X-Api-Key']);
+        $client->setDefaultOption('headers/X-Api-Key', $this->apiKey);
 
         $this->serviceClient = new GuzzleClient(
             $client,

@@ -1,11 +1,13 @@
 {
-    "models": {
-        "defaultJsonResponse": {
-            "type": "object",
+  "models": {
+    "defaultJsonResponse": {
+        "type": "object",
+        "additionalProperties": {
             "location": "json"
         }
-    },
-    "imports": [
-        "orders.json"
-    ]
+    }
+  },
+  "imports": [
+    "orders.json"
+  ]
 }

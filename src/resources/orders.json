@@ -2,7 +2,7 @@
     "operations": {
         "getOrders": {
             "httpMethod": "GET",
-            "uri": "orders",
+            "uri": "/orders",
             "description": "Lists and returns order information.",
             "responseModel": "defaultJsonResponse",
             "parameters": {
