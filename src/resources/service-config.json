@@ -9,6 +9,7 @@
   },
   "imports": [
       "orders.json",
-      "customers.json"
+      "customers.json",
+      "purchaseorders.json"
   ]
 }

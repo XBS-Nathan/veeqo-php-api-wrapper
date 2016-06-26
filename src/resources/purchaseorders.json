@@ -1,0 +1,27 @@
+{
+    "operations": {
+        "getCustomers": {
+            "httpMethod": "GET",
+            "uri": "/purchase_orders",
+            "description": "Lists and returns purchase order information.",
+            "responseModel": "defaultJsonResponse",
+            "parameters": {
+                "page_size": {
+                    "type": "integer",
+                    "location": "query",
+                    "required": false
+                },
+                "page": {
+                    "type": "integer",
+                    "location": "query",
+                    "required": false
+                },
+                "show_complete": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                }
+            }
+        }
+    }
+}
