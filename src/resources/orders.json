@@ -1,0 +1,47 @@
+{
+    "operations": {
+        "getOrders": {
+            "httpMethod": "GET",
+            "uri": "orders",
+            "description": "Lists and returns order information.",
+            "responseModel": "defaultJsonResponse",
+            "parameters": {
+                "since_id": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "created_at_min": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "updated_at_min": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "page_size": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "page": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "query": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "status": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                }
+            }
+        }
+    }
+}
