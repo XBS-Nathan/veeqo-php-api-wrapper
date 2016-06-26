@@ -2,13 +2,14 @@
 
 use Guzzle\Service\Loader\JsonLoader;
 use GuzzleHttp\Client as BaseClient;
+use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use Symfony\Component\Config\FileLocator;
 
 class Client
 {
 
-    const VEEQO_API_URL = 'http//';
+    const VEEQO_API_URL = 'http://api.veeqo.com';
 
     /**
      * Guzzle service description
@@ -48,7 +49,9 @@ class Client
         $this->locator = new FileLocator($configDirectory);
         $this->jsonLoader = new JsonLoader($this->locator);
 
-        $this->settings = $settings;
+        $this->settings = array_merge($settings, [
+            'baseUrl' => self::VEEQO_API_URL
+        ]);
 
         $this->buildClient();
     }
@@ -64,6 +67,8 @@ class Client
         $this->loadConfig();
 
         $client = $this->getBaseClient();
+
+        $client->setDefaultOption('headers/X-Api-Key', $this->settings['X-Api-Key']);
 
         $this->serviceClient = new GuzzleClient(
             $client,
@@ -99,7 +104,7 @@ class Client
     {
         $description = $this->jsonLoader->load($this->locator->locate('service-config.json'));
 
-        $this->description = array_merge($description, ['baseUrl' => self::VEEQO_API_URL]);
+        $this->description = new Description(array_merge($description, ['baseUrl' => self::VEEQO_API_URL, ]));
     }
 
     public function __call($method, $parameters)
