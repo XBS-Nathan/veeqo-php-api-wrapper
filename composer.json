@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Shopify\\": "src/"
+            "Veeqo\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Shopify\\Tests\\": "tests/"
+            "Veeqo\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable"
