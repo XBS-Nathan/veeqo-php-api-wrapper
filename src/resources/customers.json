@@ -1,0 +1,22 @@
+{
+    "operations": {
+        "getCustomers": {
+            "httpMethod": "GET",
+            "uri": "/customers",
+            "description": "Lists and returns customer information.",
+            "responseModel": "defaultJsonResponse",
+            "parameters": {
+                "page_size": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "page": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                }
+            }
+        }
+    }
+}
