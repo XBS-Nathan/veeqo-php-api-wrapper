@@ -7,12 +7,12 @@
             "responseModel": "defaultJsonResponse",
             "parameters": {
                 "page_size": {
-                    "type": "string",
+                    "type": "integer",
                     "location": "query",
                     "required": false
                 },
                 "page": {
-                    "type": "string",
+                    "type": "integer",
                     "location": "query",
                     "required": false
                 },
