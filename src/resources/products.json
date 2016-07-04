@@ -7,7 +7,7 @@
             "responseModel": "defaultJsonResponse",
             "parameters": {
                 "since_id": {
-                    "type": "string",
+                    "type": "integer",
                     "location": "query",
                     "required": false
                 },
@@ -22,12 +22,12 @@
                     "required": false
                 },
                 "page_size": {
-                    "type": "string",
+                    "type": "integer",
                     "location": "query",
                     "required": false
                 },
                 "page": {
-                    "type": "string",
+                    "type": "integer",
                     "location": "query",
                     "required": false
                 },

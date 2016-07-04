@@ -1,16 +1,23 @@
 {
-  "models": {
-    "defaultJsonResponse": {
-        "type": "object",
-        "additionalProperties": {
-            "location": "json"
+    "models": {
+        "defaultJsonResponse": {
+            "type": "object",
+            "properties": {
+                "total_count": {
+                    "location": "header",
+                    "sentAs": "X-Total-Count",
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": {
+                "location": "json"
+            }
         }
-    }
-  },
-  "imports": [
-      "orders.json",
-      "customers.json",
-      "purchaseorders.json",
-      "products.json"
-  ]
+    },
+    "imports": [
+        "orders.json",
+        "customers.json",
+        "purchaseorders.json",
+        "products.json"
+    ]
 }
