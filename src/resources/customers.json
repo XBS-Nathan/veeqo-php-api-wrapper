@@ -15,7 +15,17 @@
                     "type": "string",
                     "location": "query",
                     "required": false
-                }
+                },
+                "created_at_min": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
+                "updated_at_min": {
+                    "type": "string",
+                    "location": "query",
+                    "required": false
+                },
             }
         }
     }

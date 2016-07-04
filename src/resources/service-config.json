@@ -7,10 +7,10 @@
                     "location": "header",
                     "sentAs": "X-Total-Count",
                     "type": "integer"
+                },
+                "data": {
+                    "location": "json"
                 }
-            },
-            "additionalProperties": {
-                "location": "json"
             }
         }
     },
